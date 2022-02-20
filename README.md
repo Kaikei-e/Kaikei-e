@@ -2,7 +2,7 @@
 
 Here are some ideas to get you started:
 
-- 🔭 I’m currently working on ClassifyCrab(OSS)
+- 🔭 I’m currently working on ClassifyCrab(OSS), Schemode
 - 🌱 I’m currently learning Rust, Russian, wasm, Next.js
 - 👯 I’m looking to collaborate on ...
 - 🤔 I’m looking for help with ...
