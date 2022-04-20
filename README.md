@@ -2,8 +2,8 @@
 
 Here are some ideas to get you started:
 
-- 🔭 I’m currently working on ClassifyCrab(OSS), Schemode
-- 🌱 I’m currently learning Rust, Russian, wasm, Next.js
+- 🔭 I’m currently working on Software architecture, Schemode
+- 🌱 I’m currently learning Elixir
 - 😻 I love Go.
 - 👯 I’m looking to collaborate on ...
 - 🤔 I’m looking for help with ...
