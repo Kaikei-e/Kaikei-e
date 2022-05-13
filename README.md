@@ -2,8 +2,8 @@
 
 Here are some ideas to get you started:
 
-- 🔭 I’m currently working on Software architecture, Schemode
-- 🌱 I’m currently learning Elixir
+- 🔭 I’m currently working on Software architecture, caffenium
+- 🌱 I’m currently learning Nim, Elixir
 - 😻 I love Go.
 - 👯 I’m looking to collaborate on ...
 - 🤔 I’m looking for help with ...
