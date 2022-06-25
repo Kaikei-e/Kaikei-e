@@ -1,8 +1,8 @@
 ### Hi there 👋
 
 
-- 🔭 I’m currently working on Software architecture, caffenium
-- 🌱 I’m currently learning Nim, Elixir
+- 🔭 I’m currently working on Software architecture, suiibell
+- 🌱 I’m currently learning Software Architecture, DB
 - 😻 I love Go.
 - 👯 I’m looking to collaborate on ...
 - 🤔 I’m looking for help with ...
