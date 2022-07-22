@@ -13,5 +13,3 @@
 -->
 
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Kaikei-e&layout=compact&hide=javascript,html,css,scss,svelte,dockerfile)](https://github.com/anuraghazra/github-readme-stats)
-
-
