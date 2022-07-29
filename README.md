@@ -2,7 +2,7 @@
 
 
 - 🔭 I’m currently working on Software architecture, suiibell
-- 🌱 I’m currently learning Software Architecture, DB
+- 🌱 I’m currently learning Software Architecture, DB, Rust
 - 😻 I love Go.
 - 👯 I’m looking to collaborate on ...
 - 🤔 I’m looking for help with ...
