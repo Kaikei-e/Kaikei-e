@@ -1,8 +1,8 @@
 ### Hi there 👋
 
 
-- 🔭 I’m currently working on New Blog Site, Software architecture
-- 🌱 I’m currently learning Software Architecture, DB, Rust
+- 🔭 I’m currently working on "Yamori", Software architecture
+- 🌱 I’m currently learning Software Architecture, DB, Svelte, SvelteKit
 - 😻 I love Go.
 - 👯 I’m looking to collaborate on ...
 - 🤔 I’m looking for help with ...
