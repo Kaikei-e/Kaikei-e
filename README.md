@@ -1,8 +1,8 @@
 ### Hi there 👋
 
 
-- 🔭 I’m currently working on "Yamori", Software architecture
-- 🌱 I’m currently learning Software Architecture, Distributed services, DB, Svelte, SvelteKit
+- 🔭 I’m currently working on "Yamori", Software Architecture
+- 🌱 I’m currently learning Software Architecture, Distributed Services, DB, Svelte, SvelteKit
 - 😻 I love Go.
 - 📫 How to reach me: https://the3ridge.me
 - 😄 Pronouns: Kaikei
@@ -11,7 +11,6 @@
   - https://the3ridge.me
 
 <br>
-
 
 -->
 
