@@ -2,7 +2,7 @@
 
 
 - 🔭 I’m currently working on "Yamori", Software Architecture
-- 🌱 I’m currently learning Software Architecture, Distributed Services, DB, Svelte, SvelteKit
+- 🌱 I’m currently learning Software Architecture, Distributed Services, DB, Scala
 - 😻 I love Go.
 - 📫 How to reach me: https://the3ridge.me
 - 😄 Pronouns: Kaikei
