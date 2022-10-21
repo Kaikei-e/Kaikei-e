@@ -7,7 +7,7 @@
 - 📫 How to reach me: https://the3ridge.me
 - 😄 Pronouns: Kaikei
 - blogs
-  - https://www.the3ridge.com
+  - https://www.the3ridge.com (This is old one)
   - https://the3ridge.me
 
 <br>
