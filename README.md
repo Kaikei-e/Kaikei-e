@@ -1,7 +1,7 @@
 ### Hi there 👋
 
 
-- 🔭 I’m currently working on "CurioNoah" and "Mooring", Software Architecture
+- 🔭 I’m currently working on "CurioNoah", "Mooring" and Software Architecture
 - 🌱 I’m currently learning Software Architecture, Distributed Services, DB, Rust
 - 😻 I love Go.
 - 📫 How to reach me: https://the3ridge.me
