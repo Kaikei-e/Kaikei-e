@@ -9,6 +9,8 @@
 - blogs
   - https://www.the3ridge.com
   - https://the3ridge.me
+- tech scrap
+  - https://zenn.dev/e_kaikei
 
 <br>
 
