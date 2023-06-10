@@ -16,4 +16,4 @@
 
 ---
 
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Kaikei-e&layout=compact&hide=javascript,html,css,scss)](https://github.com/Kaikei-e/github-readme-stats)
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Kaikei-e&layout=compact&hide=javascript,svelte,html,css,scss)](https://github.com/Kaikei-e/github-readme-stats)
