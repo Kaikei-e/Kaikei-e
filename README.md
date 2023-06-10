@@ -2,7 +2,7 @@
 
 
 - 🔭 I’m currently working on "CurioNoah" and Software Architecture
-- 🌱 I’m currently learning Software Architecture, Distributed Services, DB, Rust, F#
+- 🌱 I’m currently learning Software Architecture, DB, Rust, F#
 - 😻 I love Go.
 - 📫 How to reach me: https://the3ridge.me
 - 😄 Pronouns: Kaikei
