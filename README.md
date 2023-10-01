@@ -4,10 +4,10 @@
 - 🔭 I’m currently working on "CurioNoah" and Software Architecture
 - 🌱 I’m currently learning Software Architecture, DB, Rust, F#
 - 😻 I love Go and Rust(Still really beginner).
-- 📫 How to reach me: https://www.the3ridge.com
+- 📫 How to reach me: https://www.the3ridge.me
 - 😄 Pronouns: Kaikei
 - blogs
-  - https://www.the3ridge.com
+  - https://www.the3ridge.com(old)
   - https://the3ridge.me
 - tech scrap
   - https://zenn.dev/e_kaikei
