@@ -1,7 +1,7 @@
 ### Hi there 👋
 
 
-- 🔭 I’m currently working on "CurioNoah" and Software Architecture
+- 🔭 I’m currently working on "CardinalAura" and Software Architecture
 - 🌱 I’m currently learning Software Architecture, DB, Rust, F#
 - 😻 I love Go and Rust(Still really beginner).
 - 📫 How to reach me: https://www.the3ridge.me
