@@ -15,14 +15,6 @@
 
 <div align="center">
 
-![Main Metrics](./metrics.main.svg)
-
-<details>
-<summary>📊 言語分布 & コーディング習慣</summary>
-
-![Languages](./metrics.languages.svg)
-![Habits](./metrics.habits.svg)
-
-</details>
+![Metrics](./metrics.svg)
 </div>
 
