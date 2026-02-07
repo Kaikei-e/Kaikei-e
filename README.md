@@ -6,15 +6,10 @@
 - 😻 I love Go and Rust(Still really beginner).
 - 📫 How to reach me: https://the3ridge.me
 - 😄 Pronouns: Kaikei
-- blog
-  - https://the3ridge.me
 - tech scrap
   - https://zenn.dev/e_kaikei
 
 <br>
 
-<div align="center">
 
 ![Metrics](./metrics.svg)
-</div>
-
