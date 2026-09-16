@@ -37,6 +37,9 @@ jobs:
         with:
           persist-credentials: false
           sparse-checkout: .github/profile-cards
+          # clean(既定 true)は checkout 前に git clean -ffdx を走らせ、
+          # 直前の 3D contribution calendar ステップが生成した profile-3d-contrib/ を消してしまう
+          clean: false
 
       - name: Setup Node.js
         uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
