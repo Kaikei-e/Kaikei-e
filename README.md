@@ -15,4 +15,4 @@
   <img alt="3D contribution calendar" src="./profile/contrib-3d-light.svg">
 </picture>
 
-<img alt="GitHub stats" src="./profile/stats.svg"> <img alt="Top languages" src="./profile/top-langs.svg">
+<img alt="Top languages" src="./profile/top-langs.svg">
