@@ -10,6 +10,9 @@
   - https://zenn.dev/e_kaikei
 
 <br>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./profile/contrib-3d-dark.svg">
+  <img alt="3D contribution calendar" src="./profile/contrib-3d-light.svg">
+</picture>
 
-
-![Metrics](./metrics.svg)
+<img alt="GitHub stats" src="./profile/stats.svg"> <img alt="Top languages" src="./profile/top-langs.svg">
