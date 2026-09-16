@@ -59,13 +59,6 @@ jobs:
         working-directory: .github/profile-cards
         run: pnpm install --frozen-lockfile --prod
 
-      - name: Render stats cards
-        working-directory: .github/profile-cards
-        env:
-          PAT_1: ${{ github.token }}
-          OWNER: ${{ github.repository_owner }}
-        run: node render.mjs "$GITHUB_WORKSPACE/profile"
-
       - name: 3D contribution calendar
         uses: yoshi389111/github-profile-3d-contrib@7d95e7d4cdc028dd1e1cbd957d65f35efb12ae39 # v0.9.3
         env:
@@ -133,7 +126,6 @@ jobs:
           mkdir -p "$out"
           cp profile-3d-contrib/profile-green.svg       "$out/contrib-3d-light.svg"
           cp profile-3d-contrib/profile-night-green.svg "$out/contrib-3d-dark.svg"
-          cp profile/stats.svg profile/top-langs.svg profile/activity.md "$out/"
           ls -l "$out"
 
       - name: Upload artifact
@@ -170,12 +162,12 @@ jobs:
         run: |
           set -euo pipefail
           src="${RUNNER_TEMP}/assets"
-          expected=(contrib-3d-light.svg contrib-3d-dark.svg stats.svg top-langs.svg activity.md)
+          expected=(contrib-3d-light.svg contrib-3d-dark.svg top-langs.svg activity.md)
 
           while IFS= read -r -d '' path; do
             name="${path#"$src"/}"
             case "$name" in
-              contrib-3d-light.svg|contrib-3d-dark.svg|stats.svg|top-langs.svg|activity.md) ;;
+              contrib-3d-light.svg|contrib-3d-dark.svg|top-langs.svg|activity.md) ;;
               *) echo "::error::unexpected entry in artifact: $name"; exit 1 ;;
             esac
             if [[ -L "$path" || ! -f "$path" ]]; then
@@ -198,7 +190,7 @@ jobs:
           set -euo pipefail
           src="${RUNNER_TEMP}/assets"
           mkdir -p profile
-          cp "$src"/contrib-3d-light.svg "$src"/contrib-3d-dark.svg "$src"/stats.svg "$src"/top-langs.svg profile/
+          cp "$src"/contrib-3d-light.svg "$src"/contrib-3d-dark.svg profile/
 
           start='<!-- ACTIVITY:START -->'
           end='<!-- ACTIVITY:END -->'
