@@ -26,33 +26,51 @@ jobs:
     permissions:
       contents: read
     steps:
+      - name: Checkout renderer
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+          sparse-checkout: .github/profile-cards
+
+      - name: Setup Node.js
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: "24"
+
+      # package.json の packageManager を唯一の正とし、tarball の sha512 を照合してから入れる
+      - name: Install pinned pnpm
+        working-directory: .github/profile-cards
+        run: |
+          set -euo pipefail
+          pm="$(jq -r '.packageManager' package.json)"
+          if [[ ! "$pm" =~ ^pnpm@([0-9]+\.[0-9]+\.[0-9]+)\+sha512\.([0-9a-f]{128})$ ]]; then
+            echo "::error::packageManager must pin both version and sha512"
+            exit 1
+          fi
+          ver="${BASH_REMATCH[1]}"
+          hash="${BASH_REMATCH[2]}"
+          cd "$RUNNER_TEMP"
+          npm pack "pnpm@${ver}" --silent >/dev/null
+          echo "${hash}  pnpm-${ver}.tgz" | sha512sum --check --strict
+          npm install --global --ignore-scripts "./pnpm-${ver}.tgz"
+          pnpm --version
+
+      - name: Install renderer dependencies
+        working-directory: .github/profile-cards
+        run: pnpm install --frozen-lockfile --prod
+
+      - name: Render stats cards
+        working-directory: .github/profile-cards
+        env:
+          PAT_1: ${{ github.token }}
+          OWNER: ${{ github.repository_owner }}
+        run: node render.mjs "$GITHUB_WORKSPACE/profile"
+
       - name: 3D contribution calendar
         uses: yoshi389111/github-profile-3d-contrib@7d95e7d4cdc028dd1e1cbd957d65f35efb12ae39 # v0.9.3
         env:
           GITHUB_TOKEN: ${{ github.token }}
           USERNAME: ${{ github.repository_owner }}
-
-      - name: Stats card
-        uses: stats-organization/github-readme-stats-action@e856fc8de9d7729b463c468911e232cfbdc3d55e # v2.0.2
-        with:
-          card: stats
-          options: "username=${{ github.repository_owner }}&show_icons=true&hide_border=true&theme=transparent"
-          path: profile/stats.svg
-          token: ${{ github.token }}
-          # 同梱 core 2.1.3 は GITHUB_TOKEN で stargazers が FORBIDDEN になるため、修正済み版を完全固定。
-          # アクションの同梱版が 2.2.0 以上になったらこの行を "" に戻す
-          core_version: "2.2.0"
-          fail_on_error: "true"
-
-      - name: Top languages card
-        uses: stats-organization/github-readme-stats-action@e856fc8de9d7729b463c468911e232cfbdc3d55e # v2.0.2
-        with:
-          card: top-langs
-          options: "username=${{ github.repository_owner }}&layout=compact&langs_count=8&hide_border=true&theme=transparent"
-          path: profile/top-langs.svg
-          token: ${{ github.token }}
-          core_version: "2.2.0"
-          fail_on_error: "true"
 
       # サードパーティ製アクションを使わず gh + jq だけで生成する
       - name: Recent activity

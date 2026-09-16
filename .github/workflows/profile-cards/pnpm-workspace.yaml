@@ -1,0 +1,4 @@
+# 公開から7日（分単位）経っていないバージョンは解決しない
+minimumReleaseAge: 10080
+# 公開方法の信頼度が以前より下がったバージョンを拒否する
+trustPolicy: no-downgrade
