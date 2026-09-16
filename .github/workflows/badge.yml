@@ -32,6 +32,39 @@ jobs:
           GITHUB_TOKEN: ${{ github.token }}
           USERNAME: ${{ github.repository_owner }}
 
+      - name: Checkout renderer
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+          sparse-checkout: .github/profile-cards
+
+      - name: Setup Node.js
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: "24"
+
+      # package.json の packageManager を唯一の正とし、tarball の sha512 を照合してから入れる
+      - name: Install pinned pnpm
+        working-directory: .github/profile-cards
+        run: |
+          set -euo pipefail
+          pm="$(jq -r '.packageManager' package.json)"
+          if [[ ! "$pm" =~ ^pnpm@([0-9]+\.[0-9]+\.[0-9]+)\+sha512\.([0-9a-f]{128})$ ]]; then
+            echo "::error::packageManager must pin both version and sha512"
+            exit 1
+          fi
+          ver="${BASH_REMATCH[1]}"
+          hash="${BASH_REMATCH[2]}"
+          cd "$RUNNER_TEMP"
+          npm pack "pnpm@${ver}" --silent >/dev/null
+          echo "${hash}  pnpm-${ver}.tgz" | sha512sum --check --strict
+          npm install --global --ignore-scripts "./pnpm-${ver}.tgz"
+          pnpm --version
+
+      - name: Install renderer dependencies
+        working-directory: .github/profile-cards
+        run: pnpm install --frozen-lockfile --prod
+
       - name: Render stats cards
         working-directory: .github/profile-cards
         env:
