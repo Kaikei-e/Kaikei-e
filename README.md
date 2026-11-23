@@ -25,7 +25,7 @@ WebAssembly Component Model and WASI · performance engineering and benchmark me
 
 #### Writing
 
-- [Zenn](https://zenn.dev/e_kaikei): technical articles, mostly in Japanese
+- [Zenn](https://zenn.dev/e_kaikei): technical articles
 - [Blog](https://the3ridge.me): notes, essays and photography
 
 #### Contact
